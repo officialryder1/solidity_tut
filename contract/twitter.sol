@@ -8,20 +8,44 @@ pragma solidity 0.8.18;
 
 // step 1
 contract Twitter {
+    // using struct to create a datatype kindof for tweet
+    // 1. Define a struct with author, content, timestamp, likes
+    // 2. Add the struct to the array
+    // 3. test tweet
+
+    // define struct
+    struct Tweet {
+        address author;
+        string content;
+        uint256 timestamp;
+        uint256 likes;
+    }
+
+    
     // step 2
-    mapping (address => string[]) public tweets;
+    // Using struct we replace the string[] with the Tweet we created above
+    mapping (address => Tweet[]) public tweets;
+
+    
+
+    function createTweet(string memory _tweet) public {
+        Tweet memory newTweet = Tweet({
+            author: msg.sender,
+            content: _tweet,
+            timestamp: block.timestamp,
+            likes: 0
+        });
 
     // step 3
-    function createTweet(string memory _tweet) public {
-        tweets[msg.sender].push(_tweet);
+        tweets[msg.sender].push(newTweet);
     }
 
     // step 4
-    function getTweets(address _owner, uint _i) public view returns (string memory) {
+    function getTweets(address _owner, uint _i) public view returns (Tweet memory) {
         return tweets[_owner][_i];
     }
 
-    function getAllTweet(address _owner) public view returns (string[] memory) {
+    function getAllTweet(address _owner) public view returns (Tweet[] memory) {
         return tweets[_owner];
     }
 }
