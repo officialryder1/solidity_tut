@@ -62,6 +62,11 @@
 					{
 						"components": [
 							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
 								"internalType": "address",
 								"name": "author",
 								"type": "address"
@@ -103,6 +108,11 @@
 					{
 						"components": [
 							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
 								"internalType": "address",
 								"name": "author",
 								"type": "address"
@@ -129,6 +139,24 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					}
+				],
+				"name": "likeTweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -160,6 +188,11 @@
 				"name": "tweets",
 				"outputs": [
 					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
 						"internalType": "address",
 						"name": "author",
 						"type": "address"
@@ -182,6 +215,24 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					}
+				],
+				"name": "unlikeTweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -197,7 +248,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/twitter-modifier.sol": "Twitter"
+			"contract/twitter-addLike-exercise.sol": "Twitter"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -211,12 +262,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/twitter-modifier.sol": {
-			"keccak256": "0x2cc1fd707fe0d278f7c47af4dd8704245bc8545ac8ec0faa580b90e62a77d30d",
+		"contract/twitter-addLike-exercise.sol": {
+			"keccak256": "0x89688d7e165b58a757445442d0db7ff8d484d1245a5dc13ba374fcb27ab47f06",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://016569f24bf5efc5a0bff0fe6d34fb667d549f0a33fcd8964fd9614826687644",
-				"dweb:/ipfs/QmcUD7aAg1n2MVEh417c1U4cDR32bxmr9nHg4LeevuP8X9"
+				"bzz-raw://de413cec83c0d61f08d41e25f34855a47a9758854f2a8bf11f18d2c3963d8f00",
+				"dweb:/ipfs/QmYsSQBPKzyDkme5omuMf5yUQegaYVnDrxcenATQYfXa3a"
 			]
 		}
 	},
