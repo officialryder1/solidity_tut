@@ -76,6 +76,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "unPause",
 				"outputs": [],
@@ -96,7 +114,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contract/twitter-modifier-task.sol": "PausableToken"
+			"contract/modifier-task.sol": "PausableToken"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -110,12 +128,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contract/twitter-modifier-task.sol": {
-			"keccak256": "0x983e3a61a321f69efd8473739e11b0a29c7b4bdd6f467e4c36d1734b91cccbee",
+		"contract/modifier-task.sol": {
+			"keccak256": "0xda9af528b0e374f540fdfb6d8fb349e9de0391a8ee51f7c3f456a127448a250b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://265702ee10b5ff9938cb3e3bd421340415806c32b35f3cfbb23c6aa1840511d9",
-				"dweb:/ipfs/QmNQ38bjyno6RfThj5SkxxBi3tR1okdEHNJHaviH5SXrqd"
+				"bzz-raw://d0f6d697de9142e292c67b88d043e7f236bdc1a6cd9cd31636cf49fc606915f2",
+				"dweb:/ipfs/QmXKoP6Yzr3s7JnyiskwLwxVQ9VKPPLRk8TnmyaSWUuLry"
 			]
 		}
 	},

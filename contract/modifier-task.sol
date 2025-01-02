@@ -19,6 +19,11 @@ contract PausableToken {
         _;
     }
 
+    modifier check() {
+        require(paused != true, "already paused");
+        _;
+    }
+
     function checkPause() public view onlyOwner returns (bool) {
         require(paused == true, "not paused!");
 
@@ -35,5 +40,14 @@ contract PausableToken {
         require(paused == true, "Not paused!");
         paused = false;
 
+    }
+
+    // Transfer function
+    function transfer(address to, uint amount) public check {
+        require(balances[msg.sender] >= amount, "not enough balance");
+
+        // send amount to address
+        balances[to] += amount;
+        balances[msg.sender] -= amount;
     }
  }
